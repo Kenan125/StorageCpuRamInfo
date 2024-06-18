@@ -1,0 +1,80 @@
+{
+  "DriveInfo": [
+    {
+      "C:": {
+        "TotalSpaceGB": "930.75",
+        "AvailableSpaceGB": "386.02",
+        "UsedSpaceGB": "544.72",
+        "UsedPercentage": "58.53"
+      },
+      "Timestamp": "2024-06-18 12:39:14"
+    },
+    {
+      "C:": {
+        "TotalSpaceGB": "930.75",
+        "AvailableSpaceGB": "388.47",
+        "UsedSpaceGB": "542.28",
+        "UsedPercentage": "58.26"
+      },
+      "Timestamp": "2024-06-18 14:27:00"
+    },
+    {
+      "C:": {
+        "TotalSpaceGB": "930.75",
+        "AvailableSpaceGB": "387.44",
+        "UsedSpaceGB": "543.31",
+        "UsedPercentage": "58.37"
+      },
+      "Timestamp": "2024-06-18 14:27:28"
+    }
+  ],
+  "CpuInfo": [
+    {
+      "cpuCoreNumber": "12",
+      "usedCpuPercentage": "4.05",
+      "physicalProcessors": "1",
+      "numberOfCores": "6",
+      "numberOfLogicalProcessors": "12",
+      "Timestamp": "2024-06-18 12:39:14"
+    },
+    {
+      "cpuCoreNumber": "12",
+      "usedCpuPercentage": "5.99",
+      "physicalProcessors": "1",
+      "numberOfCores": "6",
+      "numberOfLogicalProcessors": "12",
+      "Timestamp": "2024-06-18 14:27:00"
+    },
+    {
+      "cpuCoreNumber": "12",
+      "usedCpuPercentage": "5.39",
+      "physicalProcessors": "1",
+      "numberOfCores": "6",
+      "numberOfLogicalProcessors": "12",
+      "Timestamp": "2024-06-18 14:27:28"
+    }
+  ],
+  "RamInfo": [
+    {
+      "totalMemory": "16.0 GB",
+      "availableMemory": "0.8 GB",
+      "usedMemory": "15.2 GB",
+      "usagePercentage": "94.85",
+      "Timestamp": "2024-06-18 12:39:14"
+    },
+    {
+      "totalMemory": "16.0 GB",
+      "availableMemory": "3.2 GB",
+      "usedMemory": "12.8 GB",
+      "usagePercentage": "80.27",
+      "Timestamp": "2024-06-18 14:27:00"
+    },
+    {
+      "totalMemory": "16.0 GB",
+      "availableMemory": "3.0 GB",
+      "usedMemory": "13.0 GB",
+      "usagePercentage": "81.16",
+      "Timestamp": "2024-06-18 14:27:28"
+    }
+  ]
+}
