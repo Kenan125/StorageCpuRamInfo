@@ -364,3 +364,4 @@ FodyWeavers.xsd
 
 #Json - ignore json file
 ConsoleApp-StorageCpuInfo\PcSpecs.json
+/ConsoleApp-StorageCpuInfo/PcSpecs.json
