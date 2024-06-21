@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
+using System.Diagnostics;
 namespace ConsoleApp_StorageCpuRamInfo
 {
     public class Program
@@ -7,7 +8,9 @@ namespace ConsoleApp_StorageCpuRamInfo
         public static void Main(string[] args)
         {
             string filePath = "../../../PcSpecs.json";
-
+            string pcName = Environment.MachineName;
+            Console.WriteLine("PC Name: " + pcName);
+            
             while (true)
             {
 
@@ -66,8 +69,10 @@ namespace ConsoleApp_StorageCpuRamInfo
                 Thread.Sleep(12000);
 
             }
-        }
 
+
+        }
+        
 
 
 

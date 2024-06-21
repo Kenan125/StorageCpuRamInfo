@@ -11,6 +11,13 @@ namespace ConsoleApp_StorageCpuRamInfo
             // Get the number of CPU cores
             int cpuCores = Environment.ProcessorCount;
 
+            // Get the CPU name
+            string cpuName = "";
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Processor");
+            foreach (ManagementObject share in searcher.Get())
+            {
+                cpuName = share["Name"].ToString();
+            }
 
             // Get the CPU usage
             PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
@@ -19,32 +26,14 @@ namespace ConsoleApp_StorageCpuRamInfo
             float cpuUsage = cpuCounter.NextValue();
 
 
-            // Get the number of physical processors
-            int physicalProcessors = 0;
-            foreach (var item in new ManagementObjectSearcher("Select * from Win32_ComputerSystem").Get())
-            {
-                physicalProcessors = int.Parse(item["NumberOfProcessors"].ToString());
-            }
             
-
-            // Get the number of cores
-            int coreCount = 0;
-            foreach (var item in new ManagementObjectSearcher("Select * from Win32_Processor").Get())
-            {
-                coreCount += int.Parse(item["NumberOfCores"].ToString());
-            }
-
-
-            // Get the number of logical processors
-            int logicalProcessors = Environment.ProcessorCount;
 
             JObject cpuJson = new JObject
             {
+                ["cpuName"] = cpuName.ToString(),
                 ["cpuCoreNumber"] = cpuCores.ToString(),
                 ["usedCpuPercentage"] = cpuUsage.ToString("F2"),
-                ["physicalProcessors"] = physicalProcessors.ToString(),
-                ["numberOfCores"] = coreCount.ToString(),
-                ["numberOfLogicalProcessors"] = logicalProcessors.ToString(),
+               
             };
 
 
